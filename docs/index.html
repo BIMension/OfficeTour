@@ -37,7 +37,7 @@ function initializeViewer() {
         viewer.setBackgroundColor(0,0,0, 155,155,155);
         viewer.impl.toggleGroundShadow(true);
         setViewport();
-	hideElements();
+	//hideElements();
 	removeToolbarItems();
         window.setTimeout(i=>viewer.toolController.activateTool('firstperson'),4000);
     }
@@ -50,7 +50,7 @@ function initializeViewer() {
 		viewer.impl.visibilityManager.setNodeOff(17181,true);
 		viewer.impl.visibilityManager.setNodeOff(17373,true);
 		viewer.impl.visibilityManager.setNodeOff(17366,true);
-		//viewer.impl.visibilityManager.setNodeOff(29574,true);
+		viewer.impl.visibilityManager.setNodeOff(29574,true);
 		viewer.impl.visibilityManager.setNodeOff(17358,true);
 	}
         function removeToolbarItems(){
