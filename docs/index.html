@@ -6,9 +6,12 @@ G<!DOCTYPE html>
 		<meta charset="utf-8">
 	        <link rel="shortcut icon" href="#" />
 	        <link  href="https://developer.api.autodesk.com/viewingservice/v1/viewers/style.min.css?v=v6.1" rel="stylesheet" type="text/css">
-	        <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/viewer3D.min.js?v=v6.1"></script>
-  	        <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/extensions/FirstPerson/FirstPerson.js?v=v6.1"></script>
-	        <script src="deviceOrientationExt.js"></script>
+	        //<script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/viewer3D.min.js?v=v6.1"></script>
+  	        //<script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/extensions/FirstPerson/FirstPerson.js?v=v6.1"></script>
+	        //<script src="deviceOrientationExt.js"></script>
+	        <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/viewer3D.min.js?v=v6.0"></script>
+	    	<script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/extensions/FirstPerson/FirstPerson.js?v=v6.0"></script>
+  		<script src="https://raw.githubusercontent.com/wallabyway/deviceOrientationExt/master/docs/deviceOrientationExt.js"></script>
 		<style> 
 			html {overflow: hidden; margin: 0px; color: white; font-family: Avenir Next, Arial;}
 		</style>
@@ -39,7 +42,9 @@ function initializeViewer() {
         setViewport();
 	removeToolbarItems();
         window.setTimeout(i=>hideElements(),10000);
-	viewer.toolController.activateTool('firstperson');
+	viewer.loadExtension('Autodesk.FirstPerson').then(function() {
+    		viewer.toolController.activateTool('firstperson');
+	});
     }
 	function setViewport() {
 		viewer.restoreState({"viewport":{"name":"","eye":[35.90034606789771,7.516839794267135,-14.538555667179931],"target":[30.393005456024355,6.755304847805343,-14.944349322390952],"up":[-0.07210811123634939,-0.009970846275868044,0.997346982006999],"worldUpVector":[0,0,1],"pivotPoint":[-25.910858326341717,13.304184813921704,-13.584794263544843],"distanceToOrbit":60.206143509753204,"aspectRatio":0.988997555012225,"projection":"perspective","isOrthographic":false,"fieldOfView":43.95808809186831}});	
