@@ -1,6 +1,8 @@
 # AutodeskViewerOfficeTour
 
 Demo use of autodesk viewer on your mobile device with orientation handling.
+<p>
+<p>
 Device Orientation only works on android devices. iOS devices have to use the in build moving panel.
 
 <p align="center">
