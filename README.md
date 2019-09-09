@@ -15,4 +15,4 @@ Device Orientation only works on android devices. iOS devices have to use the bu
 3) Tap the link
 4) Wait until the model is loaded and the 'first person' mode is active
 5) Move your device to change the orientation
-6) Tap on the left 'first person' button to walk though the building
+6) Tap on the left 'first person' button to walk through the building
