@@ -40,7 +40,7 @@ function initializeViewer() {
 	removeToolbarItems();
         window.setTimeout(i=>hideElements(),5000);
 	//window.setTimeout(i=>viewer.loadExtension('Autodesk.FirstPerson').then(function() { viewer.toolController.activateTool('firstperson'); }),5000);
-	window.setTimeout(i=> {
+	window.setTimeout(i=> async function() {
 		const bimWalkExt = await this.viewer.getExtension('Autodesk.BimWalk');
 		viewer.toolController.activateTool('bimwalk');
 		bimWalkExt.tool.navigator.ui.tooltip.hideToolTipUI();
