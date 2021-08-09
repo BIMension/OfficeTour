@@ -41,7 +41,7 @@ function initializeViewer() {
         window.setTimeout(i=>hideElements(),5000);
 	//window.setTimeout(i=>viewer.loadExtension('Autodesk.FirstPerson').then(function() { viewer.toolController.activateTool('firstperson'); }),5000);
 	window.setTimeout(i=>{
-		const firstPersonExt = await viewer.getExtension('Autodesk.FirstPerson');
+		const firstPersonExt = viewer.getExtension('Autodesk.FirstPerson');
 		viewer.toolController.activateTool('firstperson');
                 firstPersonExt.tool.navigator.ui.tooltip.hideToolTipUI();
 	},3000);
