@@ -40,7 +40,7 @@ function initializeViewer() {
 	removeToolbarItems();
         window.setTimeout(i=>hideElements(),5000);
 	//window.setTimeout(i=>viewer.loadExtension('Autodesk.FirstPerson').then(function() { viewer.toolController.activateTool('firstperson'); }),5000);
-	window.setTimeout(i=>viewer.getExtension('Autodesk.FirstPerson').then(function(ext) { viewer.toolController.activateTool('firstperson');ext.tool.navigator.ui.tooltip.hideToolTipUI(); }),5000);
+	window.setTimeout(i=>viewer.getExtension('Autodesk.FirstPerson').then(function(ext) { viewer.toolController.activateTool('firstperson')}),5000);
     }
 	function setViewport() {
 		viewer.restoreState({"viewport":{"name":"","eye":[35.90034606789771,7.516839794267135,-14.538555667179931],"target":[30.393005456024355,6.755304847805343,-14.944349322390952],"up":[-0.07210811123634939,-0.009970846275868044,0.997346982006999],"worldUpVector":[0,0,1],"pivotPoint":[-25.910858326341717,13.304184813921704,-13.584794263544843],"distanceToOrbit":60.206143509753204,"aspectRatio":0.988997555012225,"projection":"perspective","isOrthographic":false,"fieldOfView":43.95808809186831}});	
